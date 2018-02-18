@@ -6,11 +6,11 @@
 		<listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
 	</listener>
 	<servlet>
-		<servlet-name>Teste</servlet-name>
+		<servlet-name>AprovacaoWS</servlet-name>
 		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Teste</servlet-name>
-		<url-pattern>/teste</url-pattern>
+		<servlet-name>AprovacaoWS</servlet-name>
+		<url-pattern>/aprovacaoWS</url-pattern>
 	</servlet-mapping>
 </web-app>
