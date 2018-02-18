@@ -8,21 +8,28 @@ import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.Style;
 import javax.jws.soap.SOAPBinding.Use;
 
-import br.com.grupojcr.rmws.dao.TMOVDAO;
+import br.com.grupojcr.rmws.business.FluigBusiness;
+import br.com.grupojcr.rmws.dao.RMDAO;
 
 @WebService
 @SOAPBinding(style = Style.RPC, use = Use.LITERAL)
 public class AprovacaoWS {
 	
 	@EJB
-	private TMOVDAO daoTMOV;
+	private RMDAO rmDAO;
+	
+	@EJB
+	private FluigBusiness fluigBusiness;
 
 	@WebMethod
 	public void iniciarAprovacao(@WebParam(name="movimento") Integer idMovimento, @WebParam(name="coligada") Integer idColigada) {
 		System.out.println("Movimento: " + idMovimento);
 		System.out.println("Coligada: " + idColigada);
 		
-		daoTMOV.obterMovimento(idMovimento, idColigada);
+		Integer mov = rmDAO.obterMovimento(idMovimento, idColigada);
+		System.out.println(mov);
+		
+		fluigBusiness.iniciarProcessoFluig();
 		
 		
 	}

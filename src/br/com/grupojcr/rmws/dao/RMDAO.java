@@ -12,9 +12,9 @@ import javax.ejb.TransactionAttributeType;
 import org.apache.log4j.Logger;
 
 @Stateless
-public class TMOVDAO extends GenericDAO {
+public class RMDAO extends GenericDAO {
 	
-	protected static Logger LOG = Logger.getLogger(TMOVDAO.class);
+	protected static Logger LOG = Logger.getLogger(RMDAO.class);
 	
 	@TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
     public Integer obterMovimento(Integer codMovimento, Integer codColigada) {
