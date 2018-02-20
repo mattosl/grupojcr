@@ -36,7 +36,7 @@ public class FluigBusiness {
 		try {
 			ECMWorkflowEngineServiceServiceSoapBindingStub cliente = obterProxy();
 				
-			cliente.startProcess("leonan", "123", 1, "Teste_Leonan", 2, new String[] {"leonan"}, null, "leonan", true, null, new String[][]{{"codcoligada", "1"}}, null, false);
+			cliente.startProcess("leonan", "123", 1, "AprovacaoOrdemCompra", 5, new String[] {"leonan"}, null, "leonan", true, null, new String[][]{{"codcoligada", "7"}, {"idmov", "4366"}}, null, false);
 		} catch (ServiceException e) {
 			LOG.error(e.getStackTrace());
 		} catch (Exception e) {

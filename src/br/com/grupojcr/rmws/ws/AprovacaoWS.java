@@ -26,9 +26,6 @@ public class AprovacaoWS {
 		System.out.println("Movimento: " + idMovimento);
 		System.out.println("Coligada: " + idColigada);
 		
-		Integer mov = rmDAO.obterMovimento(idMovimento, idColigada);
-		System.out.println(mov);
-		
 		fluigBusiness.iniciarProcessoFluig();
 		
 		
