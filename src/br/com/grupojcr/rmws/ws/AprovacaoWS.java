@@ -26,6 +26,11 @@ public class AprovacaoWS {
 		System.out.println("Movimento: " + idMovimento);
 		System.out.println("Coligada: " + idColigada);
 		
+		// Obter a aprovação
+		// Criar 1º registro do monitor de aprovação
+		// Obter aprovadores conforme valores e centro de custo
+		// Startar processo
+		
 		fluigBusiness.iniciarProcessoFluig();
 		
 		

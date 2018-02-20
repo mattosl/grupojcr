@@ -30,5 +30,13 @@ public class AprovacaoWSRest {
 			return Response.status(406).build();
 		}
 	}
+	
+	@POST
+	@Path("/aprovarMovimento") 
+	public Response aprovarMovimento(String data) {
+		// Passando idmov e codcoligada e tipo de aprovação 1ª ou 2ª
+		// Criar registro no monitor de aprovação
+		return Response.status(200).build();
+	}
 
 }
